@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -44,18 +45,36 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  
 
-    if (validateForm()) {
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon!",
-      });
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setErrors({});
-    }
-  };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!validateForm()) return;
+
+  try {
+    await emailjs.send(
+      "service_pggt5z9",  // replace with your EmailJS Service ID
+      "template_hatum4k", // replace with your EmailJS Template ID
+      formData,           // form data: {name, email, subject, message}
+      "uwwPlRsFUOn06DDzT"   // replace with your EmailJS public key
+    );
+
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for reaching out. I'll get back to you soon!",
+    });
+
+    setFormData({ name: "", email: "", subject: "", message: "" });
+    setErrors({});
+  } catch (err) {
+    toast({
+      title: "Error",
+      description: "Failed to send message. Please try again later.",
+    });
+  }
+};
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -155,7 +174,7 @@ const Contact = () => {
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="your.email@example.com"
+                    placeholder="Your Email"
                     value={formData.email}
                     onChange={handleChange}
                     className={errors.email ? "border-destructive" : ""}

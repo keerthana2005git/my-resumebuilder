@@ -56,7 +56,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex gap-4 justify-center mb-8">
             <a
-              href="https://github.com/keerthana"
+              href="https://github.com/keerthana2005git"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-border hover:bg-primary/20 hover:border-primary transition-all duration-300 hover:scale-110"
@@ -64,7 +64,7 @@ const Hero = () => {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com/in/keerthana"
+              href="https://www.linkedin.com/in/keerthana-jayaganesh/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BCxSTmMoFTxGwqdQTyUVlaQ%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-border hover:bg-primary/20 hover:border-primary transition-all duration-300 hover:scale-110"
@@ -72,7 +72,7 @@ const Hero = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="https://leetcode.com/keerthana"
+              href="https://leetcode.com/u/JwC9q4UFzA/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-border hover:bg-primary/20 hover:border-primary transition-all duration-300 hover:scale-110"
