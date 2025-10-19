@@ -13,7 +13,6 @@ const projects = [
     tech: ["Python", "HTML", "CSS", "JavaScript", "Plotly", "Pandas"],
     image: projectSegmentation,
     github: "https://github.com/keerthana2005git/Customer_Segmentation",
-    live: "#",
     date: "Sep 2025",
   },
   {
@@ -23,7 +22,6 @@ const projects = [
     tech: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     image: projectAmazon,
     github: "https://github.com/keerthana2005git/Amazon_clone",
-    live: "#",
     date: "July 2025",
   },
   {
@@ -33,7 +31,6 @@ const projects = [
     tech: ["HTML", "CSS", "Bootstrap", "JavaScript", "API"],
     image: projectWeather,
     github: "https://github.com/keerthana2005git/Climate-Crusader",
-    live: "#",
     date: "May 2024",
   },
 ];
@@ -102,7 +99,7 @@ const Projects = () => {
                       Code
                     </a>
                   </Button>
-                  <Button
+                  {/* <Button
                     size="sm"
                     className="flex-1 bg-primary hover:bg-primary/90"
                     asChild
@@ -111,7 +108,7 @@ const Projects = () => {
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Demo
                     </a>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </Card>
